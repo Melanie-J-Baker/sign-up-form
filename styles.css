@@ -53,3 +53,8 @@
 .logo {
     width: 100%;
 }
+
+button {
+    background-color: #596D48;
+    color: white;
+}
