@@ -91,6 +91,12 @@ button {
     width: 150px;
 }
 
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
 input {
     border: 1px solid #E5E7EB;
     margin: 2px;
@@ -150,10 +156,11 @@ a {
 }
 
 input:focus {
-    border: 1px solid blue;
-    box-shadow: 4px 4px 4px blue;
+    border: 0.3px solid rgba(56, 56, 218, 0.5);
+    box-shadow: 4px 4px 4px rgba(56, 56, 218, 0.5);
 }
 
 .login-para {
     font-size: 0.8rem;
 }
+
