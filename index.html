@@ -46,11 +46,13 @@
                     </div>
                     <div class="input-div">
                         <label for="password">PASSWORD</label>
-                        <input type="password" class="error" id="password" name="password" placeholder="Create new password">
+                        <input type="password" class="error" id="password" name="password" placeholder="Create new password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                        <span></span>
                     </div>
                     <div class="input-div">
                         <label for="confirm">CONFIRM PASSWORD</label>
-                        <input type="password" class="error" id="confirm" name="confirm" placeholder="Confirm new password">
+                        <input type="password" class="error" id="confirm" name="confirm" placeholder="Confirm new password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                        <span></span>
                     </div>  
                 </form>  
             </div>
