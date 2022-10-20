@@ -16,7 +16,7 @@ body {
 
 .main-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
 }
 
 .left-container {
@@ -92,8 +92,14 @@ button {
 }
 
 input {
-    border-color: #E5E7EB;
+    border: 1px solid #E5E7EB;
     margin: 2px;
+    padding: 3px;
+    font-size: 0.9rem; 
+}
+
+input, label {
+    display:block;
 }
 
 .input-div {
@@ -105,16 +111,17 @@ form {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     padding-bottom: 20px;
+    justify-items: center;
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px rgba(100, 100, 100, 0.5);
     width: 100%;
     padding: 20px;
-    background-color: beige;
+    background-color: rgb(253, 253, 230);
 }
 
 .lets {
@@ -122,18 +129,31 @@ form {
 }
 
 label {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 
 .submit-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 a {
     text-decoration: none;
     color: #596D48;
     font-weight: bold;
+}
+
+.error {
+    border-color: rgba(248, 7, 7, 0.616);
+}
+
+input:focus {
+    border: 1px solid blue;
+    box-shadow: 4px 4px 4px blue;
+}
+
+.login-para {
+    font-size: 0.8rem;
 }
