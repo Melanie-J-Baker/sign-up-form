@@ -19,39 +19,44 @@
                 </div>
                 <div class="logo-text">Odin</div>
             </div>
+            <div class="credit">Photo by <a class="credit-link" href="https://unsplash.com/photos/25xggax4bSA">Halie West</a> on Unsplash</div>
         </div>
         <div class="right-container">
             <div class="intro-container">
                 <p class="top-intro">This is not a real online service! You know you need something like this is your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-                <p class="bottom-intro">You know you want to.</p>
+                <p class="bottom-intro">You <em>know</em> you want to.</p>
             </div>
             <div class="form-container">
                 <p class="lets">Let's do this!</p>
                 <form action="" method="" id="sign-up">
                     <div class="input-div">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+                        <input type="text" id="first-name" name="first-name" pattern="^[a-zA-Z]+$" placeholder="Enter your first name">
+                        <span></span>
                     </div>
                     <div class="input-div">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+                        <input type="text" id="last-name" name="last-name" pattern="^[a-zA-Z]+$" placeholder="Enter your last name">
+                        <span></span>
                     </div>
                     <div class="input-div">
                         <label for="email">EMAIL</label>
                         <input type="email" id="email" name="email" placeholder="e.g. joebloggs@email.com">
+                        <span></span>
                     </div>
                     <div class="input-div">
                         <label for="phone">PHONE NUMBER</label>
                         <input type="tel" id="phone" name="phone" minlength="11" maxlength="11" placeholder="e.g. 01234567890">
+                        <span></span>
                     </div>
                     <div class="input-div">
                         <label for="password">PASSWORD</label>
-                        <input type="password" class="error" id="password" name="password" placeholder="Create new password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                        <input type="password" class="error" id="password" name="password" placeholder="Create new password" title="Numbers and letters only please" pattern="^(?=.*\d).{4,8}$">
                         <span></span>
                     </div>
                     <div class="input-div">
                         <label for="confirm">CONFIRM PASSWORD</label>
-                        <input type="password" class="error" id="confirm" name="confirm" placeholder="Confirm new password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+                        <input type="password" class="error" id="confirm" name="confirm" placeholder="Confirm new password" title="Numbers and letters only please" pattern="^(?=.*\d).{4,8}$">
                         <span></span>
                     </div>  
                 </form>  
@@ -59,7 +64,7 @@
 
             <div class="submit-container">
                 <button type="submit" form="sign-up">Create Account</button>
-                <p class="login-para">Already have an account? <a href="">Log in</a></p>    
+                <p class="login-para">Already have an account? <a class="login-link" href="">Log in</a></p>    
             </div>
         </div>
     </div>

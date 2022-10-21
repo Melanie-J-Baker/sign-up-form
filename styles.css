@@ -9,31 +9,30 @@
     padding: 0;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-}
 
 .main-container {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    height: 100vh;
 }
 
 .left-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
+    align-items: center;
 }
 
 .right-container {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .image-container {
     order: 1;
+    height: 100%
 }
 
 .background-img {
@@ -53,6 +52,7 @@ body {
     order: 2;
     position: absolute;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.6);
@@ -66,6 +66,14 @@ body {
 
 .logo {
     width: 100%;
+}
+
+.credit { 
+    order: 2;
+    color: white;
+    background: transparent;
+    position: absolute;
+    bottom: 0px;
 }
 
 .intro-container {
@@ -103,6 +111,8 @@ input {
     margin: 2px;
     padding: 3px;
     font-size: 0.9rem; 
+    width: 220px;
+    height: 30px;
 }
 
 input, label {
@@ -110,25 +120,20 @@ input, label {
 }
 
 .input-div {
-    padding: 5px;
-}
-
-input[type="password"]:invalid + span::after {
-    content:"Invalid password. No symbols";
+    padding: 20px;
 }
 
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    padding-bottom: 20px;
-    justify-items: center;
+    justify-items: baseline;
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     box-shadow: 0px 5px 5px rgba(100, 100, 100, 0.5);
     width: 100%;
     padding: 20px;
@@ -136,7 +141,8 @@ form {
 }
 
 .lets {
-    padding-bottom: 10px;
+    font-weight: bold;
+    padding-bottom: 20px;
 }
 
 label {
@@ -150,14 +156,18 @@ label {
     padding: 0px 20px 20px 20px;
 }
 
-a {
+.credit-link {
+    color: white;
+}
+
+.login-link {
     text-decoration: none;
     color: #596D48;
     font-weight: bold;
 }
 
-.error {
-    border-color: rgba(248, 7, 7, 0.616);
+.login-para {
+    font-size: 0.8rem;
 }
 
 input:focus {
@@ -165,7 +175,30 @@ input:focus {
     box-shadow: 4px 4px 4px rgba(56, 56, 218, 0.5);
 }
 
-.login-para {
-    font-size: 0.8rem;
+input:valid {
+    border-color: darkgreen;
 }
+
+input[type="password"]:invalid + span::after {
+    content:"4-8 chars, one digit, no symbols";
+    font-size: 0.7rem;
+    color: rgba(248, 7, 7, 0.616)   
+}
+
+input[type="email"]:invalid + span::after {
+    content:"Invalid email address";
+    color: rgba(248, 7, 7, 0.616);
+}
+
+input[type="text"]:invalid + span::after {
+    content:"Not a valid name";
+    color: rgba(248, 7, 7, 0.616);
+}
+
+input[type="tel"]:invalid + span::after {
+    content:"Invalid telephone number (11 digits)";
+    color: rgba(248, 7, 7, 0.616);
+}
+
+
 
